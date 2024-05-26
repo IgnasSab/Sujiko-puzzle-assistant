@@ -30,15 +30,29 @@ public class Main {
             arr[i] = input;
         }
 
-        SujikoSolver solver = new SujikoSolver(arr);
+        // Create the solver object
+        SujikoSolver solver = null;
+
+        try {
+            solver = new SujikoSolver(arr);
+        } catch (IllegalArgumentException e) {
+            System.out.println();
+            return;
+        }
         
         // Solve the puzzle
-        solver.solve();
+        try {
+            solver.solvePuzzle();
+        } catch (Exception e) {
+            System.out.println("solver object is null");
+        }
 
+        // Print solution
         try {
             solver.printSolution();
         } catch (PuzzleNotSolvedException e) {
             System.out.println(e);
+            return;
         }
         
         // Marks the end of the program.
@@ -51,7 +65,7 @@ public class Main {
      */
     private static void markEnd() {
         System.out.println();
-        System.out.println("THE END.");
+        System.out.println("Successfully reached the end.");
     }
 
 }
