@@ -6,6 +6,9 @@ package Custom_Exceptions;
  */
 public class PuzzleNotSolvedException extends Exception {
 
+    /** 
+     * Calls the superclass constructor to implement a basic template message.
+     */
     public PuzzleNotSolvedException(String message) {
         super(message);
     }
