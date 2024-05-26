@@ -1,4 +1,3 @@
-package Solver;
 
 // Custom 
 import Custom_Exceptions.PuzzleNotSolvedException;
@@ -16,9 +15,9 @@ import java.util.Scanner;
  */
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
+    static int arr[] = new int[4];
     public static void main(String[] args) {
         System.out.print("Input 4 numbers, this marks the start of the Sujiko puzzle: ");
-        int arr[] = {};
         for (int i = 0; i < 4; i++) {
             int input;
             try {
@@ -65,7 +64,7 @@ public class Main {
      */
     private static void markEnd() {
         System.out.println();
-        System.out.println("Successfully reached the end.");
+        System.out.println("END");
     }
 
 }
